@@ -3,6 +3,10 @@
     {
       "source": "/submit",
       "destination": "/api/main.py"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }
