@@ -294,7 +294,7 @@
     /* ── DOM REFS ──────────────────────────────────────── */
     const loginScreen = document.getElementById('loginScreen');
     const quizScreen  = document.getElementById('quizScreen');
-    const nameInput   = document.getElementById('isim_soyisim');
+    const nameInput   = document.getElementById('nameInput');
     const loginError  = document.getElementById('loginError');
     const startBtn    = document.getElementById('startBtn');
     const quizItems   = document.querySelectorAll('.quiz-item');
@@ -306,10 +306,10 @@
     nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') startQuiz(); });
  
     function startQuiz() {
-      const val = isim_soyisim.value.trim();
+      const val = nameInput.value.trim();
       if (!val) {
         loginError.textContent = 'Lütfen adınızı ve soyadınızı giriniz.';
-        isim_soyisim.focus();
+        nameInput.focus();
         return;
       }
       loginError.textContent = '';
@@ -362,7 +362,7 @@
       submitBtn.textContent = 'Kaydediliyor…';
  
       const payload = {
-        isim_soyisim: isim_soyisim.value.trim(),
+        isim_soyisim: nameInput.value.trim(),
         date: new Date().toISOString()   
       };
  
