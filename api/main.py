@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["marka-patentdy.vercel.app"],
+    allow_origins=["https://marka-patentdy.vercel.app"],
     allow_methods=["POST"],
     allow_headers=["*"],
 )
@@ -19,7 +19,7 @@ app.add_middleware(
 class QuizSubmit(BaseModel):
     isim_soyisim: str
 
-@app.post("/submit")
+@app.post("/api/submit")
 def submit(data: QuizSubmit):
     result = supabase.table("anaveri").insert({
         "isim_soyisim": data.isim_soyisim
