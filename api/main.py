@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://marka_patentdy.vercel.app"],
+    allow_origins=["marka-patentdy.vercel.app"],
     allow_methods=["POST"],
     allow_headers=["*"],
 )
