@@ -12,6 +12,10 @@ Backend
 - Python
 - FastAPI
 
+Database
+-PostgreSQL
+-Neon Database
+
 Frontend
 - Html
 - Css
