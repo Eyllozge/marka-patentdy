@@ -13,8 +13,8 @@ Backend
 - FastAPI
 
 Database
--PostgreSQL
--Neon Database
+- PostgreSQL
+- Neon Database
 
 Frontend
 - Html
